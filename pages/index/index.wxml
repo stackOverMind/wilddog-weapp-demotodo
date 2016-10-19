@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+<view class ="section">
+<label>输入一个todo项</label>
+<input bindinput="bindKeyInput"/>
+<button bindtap="addItem">增加</button>
+</view>
+
+<view class="section" wx:for="{{todos}}">
+    <text class="inline">{{item.text}}</text>
+    <button style="float:right" class="inline" bindtap="deleteItem" data-key="{{item.key}}">删除</button>
+</view>
+
+</view>
